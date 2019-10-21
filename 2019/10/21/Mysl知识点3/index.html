@@ -6,18 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Mysql知识点 | Hexo</title>
+  <title>Mysl知识点3 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="CREATE DATABASE Schooldb;USE Schooldb;#学生信息表CREATE TABLE StudentInfo(   sid INT PRIMARY KEY AUTO_INCREMENT,   snam VARCHAR(20) NOT NULL,   sex VARCHAR(5),   age INT,   birthday DATE,   cid INT,    #班级">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Mysql知识点">
-<meta property="og:url" content="http://yoursite.com/2019/10/21/Mysql知识点/index.html">
+<meta property="og:title" content="Mysl知识点3">
+<meta property="og:url" content="http://yoursite.com/2019/10/21/Mysl知识点3/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="CREATE DATABASE Schooldb;USE Schooldb;#学生信息表CREATE TABLE StudentInfo(   sid INT PRIMARY KEY AUTO_INCREMENT,   snam VARCHAR(20) NOT NULL,   sex VARCHAR(5),   age INT,   birthday DATE,   cid INT,    #班级">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-10-21T12:29:35.992Z">
+<meta property="og:updated_time" content="2019-10-21T12:37:17.463Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Mysql知识点">
+<meta name="twitter:title" content="Mysl知识点3">
 <meta name="twitter:description" content="CREATE DATABASE Schooldb;USE Schooldb;#学生信息表CREATE TABLE StudentInfo(   sid INT PRIMARY KEY AUTO_INCREMENT,   snam VARCHAR(20) NOT NULL,   sex VARCHAR(5),   age INT,   birthday DATE,   cid INT,    #班级">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -154,27 +154,27 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Mysql知识点" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Mysl知识点3" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Mysql知识点
+      Mysl知识点3
     </h1>
   
 
         
-        <a href="/2019/10/21/Mysql知识点/" class="archive-article-date">
-  	<time datetime="2019-10-21T12:26:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-21</time>
+        <a href="/2019/10/21/Mysl知识点3/" class="archive-article-date">
+  	<time datetime="2019-10-21T12:36:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-21</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id><a href="#" class="headerlink" title></a></h1><p>CREATE DATABASE Schooldb;<br>USE Schooldb;<br>#学生信息表<br>CREATE TABLE StudentInfo(<br>   sid INT PRIMARY KEY AUTO_INCREMENT,<br>   snam VARCHAR(20) NOT NULL,<br>   sex VARCHAR(5),<br>   age INT,<br>   birthday DATE,<br>   cid INT,    #班级编号<br>   beginyear VARCHAR(20),<br>   stel VARCHAR(15),<br>   address VARCHAR(100),<br>   email VARCHAR(50)<br>)<br>INSERT INTO StudentInfo(snam,sex,age<br>,birthday,cid,beginyear,stel,address<br>,email)<br>VALUES(‘崔一’,’男’,18,’2001-07-05’<br>,1,’2018’,’18867890987’,<br>‘河南省许昌市’,‘159078923@qq.com’),<br>(‘丁二’,’男’,19,’2000-08-05’<br>,2,’2018’,’18967890987’,<br>‘河南省许昌市’,‘156078923@qq.com’),<br>(‘丁三’,’男’,20,’1999-09-05’<br>,3,’2018’,’18877890987’,<br>‘河南省郑州市’,‘157078923@qq.com’),<br>(‘周三’,’女’,17,’2002-06-05’<br>,4,’2019’,’18177890987’,<br>‘河南省洛阳市’,‘157278923@qq.com’);<br>INSERT INTO StudentInfo(snam,sex,age<br>,birthday,cid,beginyear,stel,address<br>,email)<br>VALUES(‘崔二’,’男’,18,’2001-07-05’<br>,1,’2018’,’18857890987’,<br>‘河南省许昌市’,‘159088923@qq.com’);<br>SELECT * FROM StudentInfo;<br>#order by排序<br>#把StudentInfo表按年纪从小到大排序<br>SELECT * FROM StudentInfo ORDER BY age ASC;<br>#把StudentInfo表按年纪从大到小排序<br>SELECT * FROM StudentInfo ORDER BY age DESC;<br>#group by分组<br>#把某张表按照某个字段进行分组<br>#查询出每个学生的平均成绩，结果要显示的字段为，学生学号和平均成绩<br>SELECT sid,AVG(score) ‘平均成绩’ FROM score GROUP BY sid;<br>#group by … having…筛选出来符合条件的组<br>#查询出全部及格学生的平均成绩，结果要显示的字段为，学生学号和平均成绩<br>SELECT sid,AVG(score) ‘avg’ FROM score GROUP BY sid HAVING MIN(score)&gt;60;<br>#查询出考试门数不够四门的学生学号<br>SELECT sid FROM score GROUP BY sid HAVING COUNT(<em>)&lt;4;<br>#查询出“计算机基础”的成绩<br>SELECT coid,score FROM score WHERE<br>coid=(<br>SELECT coid FROM course WHERE cnam=’计算机基础’);<br>#查询出每门课的平均成绩<br>SELECT coid,AVG(score) ‘平均成绩’ FROM score GROUP BY coid;<br>#查询出周三学生的平均成绩<br>SELECT AVG(score) ‘平均成绩’ FROM score WHERE<br>sid=(<br>SELECT sid FROM StudentInfo WHERE snam=’周三’);<br>#连接<br>    SELECT * FROM studentinfo s,score c WHERE s.sid=c.sid;<br>#查询出每个人的平均成绩，要显示的字段为姓名成绩<br>    SELECT snam,AVG(score) FROM studentinfo s,score c WHERE s.sid=c.sid GROUP BY snam;<br>#内连接<br>    SELECT * FROM studentinfo s INNER JOIN score c ON s.sid=c.sid;<br>    SELECT snam,AVG(score) FROM studentinfo s INNER JOIN score c ON s.sid=c.sid GROUP BY snam;<br>#左连接<br>    SELECT * FROM studentinfo s LEFT JOIN score c ON s.sid=c.sid;<br>#查询出有不及格成绩的学生信息，缺考算不及格<br>    SELECT * FROM studentinfo WHERE sid IN(<br>    SELECT sid FROM score GROUP BY sid HAVING MIN(score)&lt;60<br>    #union求并集<br>    UNION<br>    SELECT sid FROM score GROUP BY sid HAVING COUNT(</em>)&lt;(SELECT COUNT(*) FROM course));</p>
+        <h1 id="CREATE-DATABASE-Schooldb"><a href="#CREATE-DATABASE-Schooldb" class="headerlink" title="CREATE DATABASE Schooldb;"></a>CREATE DATABASE Schooldb;</h1><p>USE Schooldb;<br>#学生信息表<br>CREATE TABLE StudentInfo(<br>   sid INT PRIMARY KEY AUTO_INCREMENT,<br>   snam VARCHAR(20) NOT NULL,<br>   sex VARCHAR(5),<br>   age INT,<br>   birthday DATE,<br>   cid INT,    #班级编号<br>   beginyear VARCHAR(20),<br>   stel VARCHAR(15),<br>   address VARCHAR(100),<br>   email VARCHAR(50)<br>)<br>INSERT INTO StudentInfo(snam,sex,age<br>,birthday,cid,beginyear,stel,address<br>,email)<br>VALUES(‘崔一’,’男’,18,’2001-07-05’<br>,1,’2018’,’18867890987’,<br>‘河南省许昌市’,‘159078923@qq.com’),<br>(‘丁二’,’男’,19,’2000-08-05’<br>,2,’2018’,’18967890987’,<br>‘河南省许昌市’,‘156078923@qq.com’),<br>(‘丁三’,’男’,20,’1999-09-05’<br>,3,’2018’,’18877890987’,<br>‘河南省郑州市’,‘157078923@qq.com’),<br>(‘周三’,’女’,17,’2002-06-05’<br>,4,’2019’,’18177890987’,<br>‘河南省洛阳市’,‘157278923@qq.com’);<br>INSERT INTO StudentInfo(snam,sex,age<br>,birthday,cid,beginyear,stel,address<br>,email)<br>VALUES(‘崔二’,’男’,18,’2001-07-05’<br>,1,’2018’,’18857890987’,<br>‘河南省许昌市’,‘159088923@qq.com’);<br>SELECT * FROM StudentInfo;<br>#order by排序<br>#把StudentInfo表按年纪从小到大排序<br>SELECT * FROM StudentInfo ORDER BY age ASC;<br>#把StudentInfo表按年纪从大到小排序<br>SELECT * FROM StudentInfo ORDER BY age DESC;<br>#group by分组<br>#把某张表按照某个字段进行分组<br>#查询出每个学生的平均成绩，结果要显示的字段为，学生学号和平均成绩<br>SELECT sid,AVG(score) ‘平均成绩’ FROM score GROUP BY sid;<br>#group by … having…筛选出来符合条件的组<br>#查询出全部及格学生的平均成绩，结果要显示的字段为，学生学号和平均成绩<br>SELECT sid,AVG(score) ‘avg’ FROM score GROUP BY sid HAVING MIN(score)&gt;60;<br>#查询出考试门数不够四门的学生学号<br>SELECT sid FROM score GROUP BY sid HAVING COUNT(<em>)&lt;4;<br>#查询出“计算机基础”的成绩<br>SELECT coid,score FROM score WHERE<br>coid=(<br>SELECT coid FROM course WHERE cnam=’计算机基础’);<br>#查询出每门课的平均成绩<br>SELECT coid,AVG(score) ‘平均成绩’ FROM score GROUP BY coid;<br>#查询出周三学生的平均成绩<br>SELECT AVG(score) ‘平均成绩’ FROM score WHERE<br>sid=(<br>SELECT sid FROM StudentInfo WHERE snam=’周三’);<br>#连接<br>    SELECT * FROM studentinfo s,score c WHERE s.sid=c.sid;<br>#查询出每个人的平均成绩，要显示的字段为姓名成绩<br>    SELECT snam,AVG(score) FROM studentinfo s,score c WHERE s.sid=c.sid GROUP BY snam;<br>#内连接<br>    SELECT * FROM studentinfo s INNER JOIN score c ON s.sid=c.sid;<br>    SELECT snam,AVG(score) FROM studentinfo s INNER JOIN score c ON s.sid=c.sid GROUP BY snam;<br>#左连接<br>    SELECT * FROM studentinfo s LEFT JOIN score c ON s.sid=c.sid;<br>#查询出有不及格成绩的学生信息，缺考算不及格<br>    SELECT * FROM studentinfo WHERE sid IN(<br>    SELECT sid FROM score GROUP BY sid HAVING MIN(score)&lt;60<br>    #union求并集<br>    UNION<br>    SELECT sid FROM score GROUP BY sid HAVING COUNT(</em>)&lt;(SELECT COUNT(*) FROM course));</p>
 <pre><code>/*
     name1 class grade
     张三  语文  89
@@ -277,7 +277,7 @@ SELECT * FROM studentinfo WHERE address LIKE &apos;%许昌%&apos;);</code></pre>
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/10/21/Mysql知识点/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/10/21/Mysl知识点3/" alt="微信分享二维码">
     </div>
 </div>
 
